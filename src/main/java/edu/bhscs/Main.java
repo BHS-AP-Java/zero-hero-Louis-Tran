@@ -12,7 +12,7 @@
 
 package edu.bhscs;
 
-class Main{
+class Main {
   public static void main(String[] args) {
     System.out.println("Sigma");
     System.out.println("Alpha");
