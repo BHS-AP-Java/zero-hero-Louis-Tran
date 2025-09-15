@@ -12,9 +12,19 @@
 
 package edu.bhscs;
 
-class Main {
+public class Main {
+  public static final char A = 'a';
+
   public static void main(String[] args) {
-    System.out.println("Sigma");
-    System.out.println("Alpha");
+    int number = 420;
+
+    System.out.println("67!" + A + number);
+    System.out.println(A + "?" + A + number);
+    System.out.println(A + A + number);
+    System.out.println();
+    System.out.println("This is neat!");
+    System.out.println();
+    System.out.println();
+    System.out.println("End of program.");
   }
 }
