@@ -24,12 +24,16 @@ public class Main {
     System.out.println(A + A + number);
     System.out.println();
     System.out.println("This is neat!");
+    Awesome steve= new Awesome("steve");
+    System.out.println(steve.getName());
     System.out.println();
     System.out.println();
     System.out.println("End of program.");
   }
 
-  public static String awesome(String[] args) {
+
+
+  public static String pushup(String[] args) {
     return "sweat";
   }
 }
