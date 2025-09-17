@@ -14,6 +14,7 @@ package edu.bhscs;
 
 public class Main {
   public static final char A = 'a';
+  public static float A_FLOAT_NAME = 3.14f;
 
   public static void main(String[] args) {
     int number = 420;
@@ -26,5 +27,9 @@ public class Main {
     System.out.println();
     System.out.println();
     System.out.println("End of program.");
+  }
+
+  public static String awesome(String[] args) {
+    return "sweat";
   }
 }
