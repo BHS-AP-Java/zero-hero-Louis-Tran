@@ -26,6 +26,16 @@ public class Main {
     System.out.println("This is neat!");
     Awesome steve= new Awesome("steve");
     System.out.println(steve.getName());
+    Awesome sue = new Awesome("sue");
+    System.out.println(sue.getName());
+    Awesome linda = new Awesome("linda");
+    System.out.println(linda.getName());
+    Awesome justin = new Awesome("justin");
+    System.out.println(justin.getName());
+    Awesome gabe = new Awesome("gabe");
+    System.out.println(gabe.getName());
+    Awesome abe = new Awesome("abe");
+    System.out.println(abe.getName());
     System.out.println();
     System.out.println();
     System.out.println("End of program.");
