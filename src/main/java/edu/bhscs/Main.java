@@ -1,5 +1,5 @@
 // Louis Tran
-// Period 2
+// P2
 // Zero Hero
 // 9/12/25
 
@@ -17,20 +17,11 @@ public class Main {
   public static float A_FLOAT_NAME = 3.14f;
 
   public static void main(String[] args) {
-    int number = 420;
+    Customer Steve = new Customer("Steve", new Cake("chocolate", 3));
+    System.out.println(Steve.purchaseCake(Steve.order));
+    System.out.println(Steve.consumeCake(Steve.order));
 
-    System.out.println("67!" + A + number);
-    System.out.println(A + "?" + A + number);
-    System.out.println(A + A + number);
-    System.out.println();
-    System.out.println("This is neat!");
-    Awesome steve = new Awesome("steve");
-    System.out.println(steve.getName());
-    steve.learnSomething("I learned how to code in Java!");
-    System.out.println(steve.getKnowledge());
-    System.out.println();
-    System.out.println();
-    System.out.println("End of program.");
+
   }
 
   public static String pushup(String[] args) {
