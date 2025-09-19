@@ -24,24 +24,14 @@ public class Main {
     System.out.println(A + A + number);
     System.out.println();
     System.out.println("This is neat!");
-    Awesome steve= new Awesome("steve");
+    Awesome steve = new Awesome("steve");
     System.out.println(steve.getName());
-    Awesome sue = new Awesome("sue");
-    System.out.println(sue.getName());
-    Awesome linda = new Awesome("linda");
-    System.out.println(linda.getName());
-    Awesome justin = new Awesome("justin");
-    System.out.println(justin.getName());
-    Awesome gabe = new Awesome("gabe");
-    System.out.println(gabe.getName());
-    Awesome abe = new Awesome("abe");
-    System.out.println(abe.getName());
+    steve.learnSomething("I learned how to code in Java!");
+    System.out.println(steve.getKnowledge());
     System.out.println();
     System.out.println();
     System.out.println("End of program.");
   }
-
-
 
   public static String pushup(String[] args) {
     return "sweat";
