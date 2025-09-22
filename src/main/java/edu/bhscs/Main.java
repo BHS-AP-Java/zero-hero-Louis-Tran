@@ -17,8 +17,10 @@ public class Main {
   public static float A_FLOAT_NAME = 3.14f;
 
   public static void main(String[] args) {
+    Baker Bob = new Baker("Bob");
     Customer Steve = new Customer("Steve", new Cake("chocolate", 3));
     System.out.println(Steve.purchaseCake(Steve.order));
+    System.out.println(Bob.bakeCake(Steve.order));
     System.out.println(Steve.consumeCake(Steve.order));
 
 
