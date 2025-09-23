@@ -2,9 +2,10 @@ package edu.bhscs;
 
 public class Baker {
   String name;
+
   public Baker(String name) {
-    this.name=name;
-    System.out.println(name+" hired as a baker.");
+    this.name = name;
+    System.out.println(name + " hired as a baker.");
   }
 
   public String bakeCake(Cake cake) {

@@ -22,8 +22,6 @@ public class Main {
     System.out.println(Steve.purchaseCake(Steve.order));
     System.out.println(Bob.bakeCake(Steve.order));
     System.out.println(Steve.consumeCake(Steve.order));
-
-
   }
 
   public static String pushup(String[] args) {
