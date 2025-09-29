@@ -2,10 +2,12 @@ package edu.bhscs;
 
 public class Baker {
   String name;
+  Store workplace;
 
-  public Baker(String name) {
+  public Baker(String name, Store workplace) {
     this.name = name;
-    System.out.println(name + " hired as a baker.");
+    this.workplace = workplace;
+    System.out.println(name + " hired as a baker at " + workplace.location + "!");
   }
 
   public String bakeCake(Cake cake) {

@@ -9,8 +9,8 @@
  *  1. For a baker to make a cake
  *  2. bake it at a bakery
  *  3. sell it to a customer
- *  4. and deliver the money to the PTA
- * 
+ *  4. and donate the money to the PTSA
+ *
  * INPUT: We don't know about input yet
  * OUTPUT: Some cool words in the command line terminal thing
  * EDGE CASE: They are all edge cases at the moment
@@ -22,15 +22,14 @@ public class Main {
   public static final char A = 'a';
   public static float A_FLOAT_NAME = 3.14f;
 
+  // My main class is fixed, therefore it is static
   public static void main(String[] args) {
-    Baker Bob = new Baker("Bob");
+    Store Bothell = new Store("Bothell");
+    Baker Bob = new Baker("Bob", Bothell);
     Customer Steve = new Customer("Steve", new Cake("chocolate", 3));
     System.out.println(Steve.purchaseCake(Steve.order));
+    System.out.println(Bothell.sellCake(Steve.order.getPrice()));
     System.out.println(Bob.bakeCake(Steve.order));
-    System.out.println(Steve.consumeCake(Steve.order));
-  }
-
-  public static String pushup(String[] args) {
-    return "sweat";
+    System.out.println(Steve.consumeCake(Steve.order, 8));
   }
 }

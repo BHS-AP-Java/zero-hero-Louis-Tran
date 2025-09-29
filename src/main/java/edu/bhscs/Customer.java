@@ -20,7 +20,20 @@ public class Customer {
         + " cake, please.";
   }
 
-  String consumeCake(Cake cake) {
-    return "Yum! I love " + cake.getFlavor() + " cake!";
+  String consumeCake(Cake cake, int slices) {
+    if (cake.slices - slices >= 0) {
+      cake.slices -= slices;
+    } else if (cake.slices == 0) {
+
+    } else {
+      return "Oh no! There are not enough slices left for " + name + " to eat!";
+    }
+    return "Yum! I love "
+        + cake.getFlavor()
+        + " cake! "
+        + name
+        + " now has "
+        + cake.getSlices()
+        + " slices left.";
   }
 }
