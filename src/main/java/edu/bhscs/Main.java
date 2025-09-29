@@ -4,7 +4,13 @@
 // 9/12/25
 
 /*
- * DESCRIPTION: Whatever Mr. Reiber says
+ * DESCRIPTION:
+ * The goal of my bakesale is:
+ *  1. For a baker to make a cake
+ *  2. bake it at a bakery
+ *  3. sell it to a customer
+ *  4. and deliver the money to the PTA
+ * 
  * INPUT: We don't know about input yet
  * OUTPUT: Some cool words in the command line terminal thing
  * EDGE CASE: They are all edge cases at the moment
