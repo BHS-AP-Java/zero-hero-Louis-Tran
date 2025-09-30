@@ -2,14 +2,16 @@ package edu.bhscs;
 
 public class Cake {
   // The fields or properties
+  Flour flour;
   String flavor;
   int slices = 8;
   int layers;
 
   // Constructor
-  public Cake(String flavor, int layers) {
+  public Cake(String flavor, int layers, Flour flour) {
     this.flavor = flavor;
     this.layers = layers;
+    this.flour = flour;
   }
 
   // Methods
