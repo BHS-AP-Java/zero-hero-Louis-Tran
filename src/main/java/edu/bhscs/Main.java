@@ -19,6 +19,7 @@
 package edu.bhscs;
 
 import java.util.Scanner;
+
 public class Main {
   public static final char A = 'a';
   public static float A_FLOAT_NAME = 3.14f;
@@ -33,16 +34,13 @@ public class Main {
     System.out.println(Bob.bakeCake(Steve.order));
     System.out.println(Steve.consumeCake(Steve.order, 8));*/
 
-
     Scanner s = new Scanner(System.in);
     System.out.println("What can we do with a scanner?");
     System.out.println("What is your favorite color?");
     String color = s.next();
-    System.out.println("Your favorite color is " + color + "!" );
+    System.out.println("Your favorite color is " + color + "!");
 
-
-    System.out.println("I don't know, but I'm done now." );
-
+    System.out.println("I don't know, but I'm done now.");
 
     s.close();
   }

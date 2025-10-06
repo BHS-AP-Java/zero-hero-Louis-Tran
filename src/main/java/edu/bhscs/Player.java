@@ -3,18 +3,18 @@ package edu.bhscs;
 import java.util.Scanner;
 
 public class Player {
-//Properties
+  // Properties
   String name;
   Scanner s;
 
-//Constructor
+  // Constructor
   public Player(String name) {
     this.s = new Scanner(System.in);
     System.out.println("What is your name?");
-    this.name=this.s.next();
+    this.name = this.s.next();
   }
 
-//methods
+  // methods
 
   public void answerQuestion(String question) {
     System.out.println("What is your question?");
