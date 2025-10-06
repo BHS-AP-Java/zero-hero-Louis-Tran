@@ -18,18 +18,32 @@
 
 package edu.bhscs;
 
+import java.util.Scanner;
 public class Main {
   public static final char A = 'a';
   public static float A_FLOAT_NAME = 3.14f;
 
   // My main class is fixed, therefore it is static
   public static void main(String[] args) {
-    Store Bothell = new Store("Bothell");
+    /*Store Bothell = new Store("Bothell");
     Baker Bob = new Baker("Bob", Bothell);
     Customer Steve = new Customer("Steve", new Cake("chocolate", 3));
     System.out.println(Steve.purchaseCake(Steve.order));
     System.out.println(Bothell.sellCake(Steve.order.getPrice()));
     System.out.println(Bob.bakeCake(Steve.order));
-    System.out.println(Steve.consumeCake(Steve.order, 8));
+    System.out.println(Steve.consumeCake(Steve.order, 8));*/
+
+
+    Scanner s = new Scanner(System.in);
+    System.out.println("What can we do with a scanner?");
+    System.out.println("What is your favorite color?");
+    String color = s.next();
+    System.out.println("Your favorite color is " + color + "!" );
+
+
+    System.out.println("I don't know, but I'm done now." );
+
+
+    s.close();
   }
 }

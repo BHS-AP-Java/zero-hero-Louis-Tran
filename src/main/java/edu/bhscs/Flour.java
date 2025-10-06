@@ -14,8 +14,9 @@ public class Flour {
     this.price = price;
     this.quality = quality;
   }
+
   public Flour(String type, int weight) {
-    this.type = type; 
+    this.type = type;
     this.weight = weight;
   }
 
@@ -32,4 +33,9 @@ public class Flour {
     return "This flour is " + this.type + " and weighs " + this.weight + " grams.";
   }
 
+  public void decayQuality() {
+    if (quality > 0) {
+      quality--;
+    }
+  }
 }
