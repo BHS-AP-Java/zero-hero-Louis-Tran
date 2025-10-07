@@ -1,33 +1,23 @@
 package edu.bhscs;
 
 public class Store {
-  // These are properties or fields and they are things a class has
+  //FIELDS AND PROPERTIES
   String location;
-  Cake inventory;
-  Double funds = 0.0;
+  String name;
 
-  // Constructor
-  public Store(String location) {
+  //CONSTRUCTOR
+  public Store(String location, String name) {
     this.location = location;
-    System.out.println("A new bakery has opened at " + location + "!");
+    this.name = name;
+    System.out.println(name + " is now open at " + location);
+
   }
 
-  // methods
-
-  String displayInventory() {
-    return this.inventory.getDisplay();
+  //METHODS
+  String getName(){
+    return this.name;
   }
-
-  String sellCake(double price) {
-    this.funds += price;
-    return location + " store sold a cake for $" + price;
-  }
-
-  Double getFunds() {
-    return funds;
-  }
-
-  String donateFunds(int amount) {
-    return "Donated $" + amount + " to the PTSA!";
+  String getLocation(){
+    return this.location;
   }
 }

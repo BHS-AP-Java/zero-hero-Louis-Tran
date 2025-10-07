@@ -3,22 +3,19 @@ package edu.bhscs;
 import java.util.Scanner;
 
 public class Player {
-  // Properties
+  // PROPERTIES AND FIELDS
+  Scanner scanner = new Scanner(System.in);
   String name;
-  Scanner s;
 
-  // Constructor
+
+  // CONSTRUCTOR
   public Player(String name) {
-    this.s = new Scanner(System.in);
-    System.out.println("What is your name?");
-    this.name = this.s.next();
+    this.name = name;
   }
 
-  // methods
-
-  public void answerQuestion(String question) {
-    System.out.println("What is your question?");
-    this.s.next();
-    System.out.println("You're an idiot.");
+  // METHODS
+  String giveAnswer(String question) {
+    System.out.println(question);
+    return scanner.nextLine();
   }
 }

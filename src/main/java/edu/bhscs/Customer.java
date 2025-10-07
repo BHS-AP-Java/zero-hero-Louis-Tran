@@ -1,39 +1,35 @@
 package edu.bhscs;
 
 public class Customer {
+  // PROPERTIES AND FIELDS
   String name;
-  Cake order;
+  int cash;
+  Cake cake;
 
-  public Customer(String name, Cake order) {
+  // CONSTRUCTOR
+  Customer(String name, int cash) {
     this.name = name;
-    this.order = order;
-    System.out.println("Hi, my name is " + name + ", and I'm here to buy a cake!");
+    this.cash = cash;
   }
 
-  String purchaseCake(Cake cake) {
-    this.order = cake;
-    return name
-        + " would like to buy a "
-        + cake.getLayers()
-        + "-layered "
-        + cake.getFlavor()
-        + " cake, please.";
+  // METHODS
+  int pay(int price) {
+    this.cash -= price;
+    return price;
   }
 
-  String consumeCake(Cake cake, int slices) {
-    if (cake.slices - slices >= 0) {
-      cake.slices -= slices;
-    } else if (cake.slices == 0) {
+  void takeCake(Cake c) {
+    this.cake = c;
+    System.out.println("Yum! I love " + c.getFlavor() + " cake!");
+  }
 
+  void eatCake() {
+    if (this.cake != null && this.cake.slices > 0) {
+      this.cake.slices--;
+      System.out.println("Mmm! That was delicious!");
     } else {
-      return "Oh no! There are not enough slices left for " + name + " to eat!";
+      System.out.println("No cake to eat!");
     }
-    return "Yum! I love "
-        + cake.getFlavor()
-        + " cake! "
-        + name
-        + " now has "
-        + cake.getSlices()
-        + " slices left.";
   }
+
 }

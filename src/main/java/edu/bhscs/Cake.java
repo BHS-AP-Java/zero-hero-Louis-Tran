@@ -1,35 +1,30 @@
 package edu.bhscs;
 
 public class Cake {
-  // The fields or properties
+  // PROPERTIES AND FIELDS
   String flavor;
-  int slices = 8;
+  Flour flour;
   int layers;
+  int slices=8;
 
-  // Constructor
-  public Cake(String flavor, int layers) {
+  // CONSTRUCTOR
+  public Cake(String flavor, Flour f) {
     this.flavor = flavor;
-    this.layers = layers;
+    this.flour=f;
   }
-
-  // Methods
+  // METHODS
   String getFlavor() {
-    return flavor;
+    return this.flavor;
   }
 
   int getLayers() {
-    return layers;
+    return this.layers;
   }
 
-  String getDisplay() {
-    return "This cake is a " + this.flavor + " cake with " + this.layers + " layers.";
+  int getPrice(){
+    return this.layers * 5;
   }
 
-  int getSlices() {
-    return slices;
-  }
 
-  double getPrice() {
-    return layers * 5.0;
-  }
+
 }
