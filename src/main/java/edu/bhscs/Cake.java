@@ -21,8 +21,8 @@ public class Cake {
     return this.layers;
   }
 
-  int getPrice(){
-    return this.layers * 5;
+  int getSlices() {
+    return this.slices;
   }
 
 

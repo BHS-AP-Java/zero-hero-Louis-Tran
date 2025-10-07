@@ -27,6 +27,7 @@ public class Customer {
     if (this.cake != null && this.cake.slices > 0) {
       this.cake.slices--;
       System.out.println("Mmm! That was delicious!");
+      System.out.println(this.cake.slices + " slices left.");
     } else {
       System.out.println("No cake to eat!");
     }
