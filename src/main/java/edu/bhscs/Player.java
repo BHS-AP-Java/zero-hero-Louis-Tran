@@ -6,6 +6,7 @@ public class Player {
   // PROPERTIES AND FIELDS
   Scanner scanner = new Scanner(System.in);
   String name;
+  int accompplishments = 0;
 
   // CONSTRUCTOR
   public Player(String name) {
@@ -16,5 +17,10 @@ public class Player {
   String giveAnswer(String question) {
     System.out.println(question);
     return scanner.nextLine();
+  }
+
+  public void accomplish(int amount){
+    this.accompplishments+=amount;
+    
   }
 }
