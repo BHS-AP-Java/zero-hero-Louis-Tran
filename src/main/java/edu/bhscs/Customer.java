@@ -14,7 +14,13 @@ public class Customer {
 
   // METHODS
   int pay(int price) {
-    this.cash -= price;
+    if (this.cash >= price) {
+      this.cash -= price;
+      System.out.println(this.name + " paid $" + price + ". Remaining cash: $" + this.cash);
+    } else {
+      System.out.println(this.name + " does not have enough cash to pay $" + price + ".");
+      price = 0; // Cannot pay
+    }
     return price;
   }
 

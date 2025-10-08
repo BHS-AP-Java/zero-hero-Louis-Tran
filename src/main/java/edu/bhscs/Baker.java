@@ -45,7 +45,7 @@ public class Baker {
   }
 
   public void learn(int amount){
-    if(this.skills+amount<10){
+    if(this.skills+amount<11){
       this.skills += amount;
     }
   }
