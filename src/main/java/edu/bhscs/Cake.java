@@ -5,13 +5,14 @@ public class Cake {
   String flavor;
   Flour flour;
   int layers;
-  int slices=8;
+  int slices = 8;
 
   // CONSTRUCTOR
   public Cake(String flavor, Flour f) {
     this.flavor = flavor;
-    this.flour=f;
+    this.flour = f;
   }
+
   // METHODS
   String getFlavor() {
     return this.flavor;
@@ -24,7 +25,4 @@ public class Cake {
   int getSlices() {
     return this.slices;
   }
-
-
-
 }

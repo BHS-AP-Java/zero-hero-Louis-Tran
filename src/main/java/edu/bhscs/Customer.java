@@ -32,5 +32,4 @@ public class Customer {
       System.out.println("No cake to eat!");
     }
   }
-
 }

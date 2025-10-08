@@ -7,7 +7,6 @@ public class Player {
   Scanner scanner = new Scanner(System.in);
   String name;
 
-
   // CONSTRUCTOR
   public Player(String name) {
     this.name = name;
