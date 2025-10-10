@@ -7,7 +7,5 @@ public class Main {
     Customer Alice = new Customer("Alice", 25);
     Bob.takeOrder(10, Alice);
     Alice.eatCake();
-   
-
   }
 }

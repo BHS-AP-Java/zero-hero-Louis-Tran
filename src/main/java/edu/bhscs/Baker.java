@@ -7,7 +7,7 @@ public class Baker {
   Flour f;
   Store placeOfWork;
   int cash;
-  int skills=0;
+  int skills = 0;
 
   // CONSTRUCTOR
   Baker(Player p, String name) {
@@ -23,8 +23,8 @@ public class Baker {
 
   Cake bakeCake() {
     String answer = this.p.giveAnswer("what cake do you you want?");
-    int timeToBake=(10-this.skills)*1000;
-    try{
+    int timeToBake = (10 - this.skills) * 1000;
+    try {
       Thread.sleep(timeToBake);
       System.out.println("Baked a " + answer + " cake.");
       learn(1);
@@ -44,8 +44,8 @@ public class Baker {
     }
   }
 
-  public void learn(int amount){
-    if(this.skills+amount<11){
+  public void learn(int amount) {
+    if (this.skills + amount < 11) {
       this.skills += amount;
     }
   }

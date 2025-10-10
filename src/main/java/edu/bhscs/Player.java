@@ -19,8 +19,7 @@ public class Player {
     return scanner.nextLine();
   }
 
-  public void accomplish(int amount){
-    this.accompplishments+=amount;
-    
+  public void accomplish(int amount) {
+    this.accompplishments += amount;
   }
 }
