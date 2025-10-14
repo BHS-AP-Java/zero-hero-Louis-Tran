@@ -19,6 +19,11 @@ public class Player {
     return scanner.nextLine();
   }
 
+  int giveInt(String question) {
+    System.out.println(question);
+    return Integer.parseInt(scanner.nextLine());
+  }
+
   public void accomplish(int amount) {
     this.accompplishments += amount;
   }
