@@ -29,7 +29,7 @@ public class Cake {
 
   // Draws a 3D ASCII art of a cake based on the number of layers
   void draw() {
-    System.out.println("                              _______");
+    System.out.println("                              ________");
     System.out.println("              __....----''''''        ```````----....__");
     System.out.println("         _-'''                                         ```-_");
     System.out.println("       .'                                                   `.");
