@@ -11,6 +11,6 @@ package edu.bhscs;
 
 public class Main {
   public static void main(String[] args) {
-    new Cake("Chocolate", 5, new Flour(8, "All purpose")).draw();
+    new Cake("Chocolate", 3, new Flour(8, "All purpose")).draw();
   }
 }
