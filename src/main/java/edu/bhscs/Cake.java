@@ -32,13 +32,13 @@ public class Cake {
     System.out.println("                              ________");
     System.out.println("              __....----''''''        ```````----....__");
     System.out.println("         _-'''                                         ```-_");
-    System.out.println("       .'"+colorCake()+"`.");
+    System.out.println("       .'                                                   `.");
     for (int i = 0; i < this.layers; i++) {
-      System.out.println("       |`-_                                               _-'|");
+      System.out.println("       |`-_"+colorCake()+"_-'|");
       System.out.println("       |   ```--....____                     ____....--'''   |");
       System.out.println("       |                `````-----------'''''                |");
       if (i == this.layers - 1) {
-        System.out.println("        `-_                                               _-'");
+        System.out.println("        `-_"+colorCake()+"_-'");
         System.out.println("           ```--....____                     ____....--'''");
         System.out.println("                        `````-----------'''''");
       }
@@ -46,7 +46,7 @@ public class Cake {
   }
 
   String colorCake(){
-    int gapLength=51;
+    int gapLength=47;
     int filling=(gapLength- this.flavor.length())/2;
     String gap="";
     for (int i = 0; i < filling; i++) {
@@ -56,6 +56,31 @@ public class Cake {
     for (int i = 0; i < filling; i++) {
       gap += " ";
     }
+    if(this.flavor.length()%2==0){
+      gap+=" ";
+    }
     return gap;
+  }
+
+  String flavorSubstring(){
+    if(this.flavor.length()<11){
+      int smallGap=(11-this.flavor.length())/2;
+      String smallFlavor="";
+      for(int i=0;i<smallGap;i++){
+        smallFlavor+=" ";
+      }
+      smallFlavor+=this.flavor;
+      for(int i=0;i<smallGap;i++){
+        smallFlavor+=" ";
+      }
+      if(this.flavor.length()%2==0){
+        smallFlavor+=" ";
+      }
+      return smallFlavor;
+
+    }
+    else{
+      return this.flavor.substring(0, 11);
+    }
   }
 }
