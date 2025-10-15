@@ -23,13 +23,13 @@ public class Baker {
 
   Cake bakeCake() {
     String answer = this.p.giveAnswer("what cake do you you want?");
-    int layers=this.p.giveInt("How many layers do you want?");
+    int layers = this.p.giveInt("How many layers do you want?");
     int timeToBake = (10 - this.skills) * 1000;
     try {
       Thread.sleep(timeToBake);
       System.out.println("Baked a " + answer + " cake.");
       learn(1);
-      return new Cake(answer, layers,  this.f);
+      return new Cake(answer, layers, this.f);
     } catch (InterruptedException e) {
       e.printStackTrace();
       System.out.println("Something went wrong while baking the cake.");

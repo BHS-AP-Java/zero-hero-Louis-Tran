@@ -32,16 +32,30 @@ public class Cake {
     System.out.println("                              ________");
     System.out.println("              __....----''''''        ```````----....__");
     System.out.println("         _-'''                                         ```-_");
-    System.out.println("       .'                                                   `.");
+    System.out.println("       .'"+colorCake()+"`.");
     for (int i = 0; i < this.layers; i++) {
-      System.out.println("       |`-_                                               _-'|" );
+      System.out.println("       |`-_                                               _-'|");
       System.out.println("       |   ```--....____                     ____....--'''   |");
       System.out.println("       |                `````-----------'''''                |");
-      if(i==this.layers - 1) {
+      if (i == this.layers - 1) {
         System.out.println("        `-_                                               _-'");
         System.out.println("           ```--....____                     ____....--'''");
         System.out.println("                        `````-----------'''''");
       }
     }
+  }
+
+  String colorCake(){
+    int gapLength=51;
+    int filling=(gapLength- this.flavor.length())/2;
+    String gap="";
+    for (int i = 0; i < filling; i++) {
+      gap += " ";
+    }
+    gap += this.flavor;
+    for (int i = 0; i < filling; i++) {
+      gap += " ";
+    }
+    return gap;
   }
 }
