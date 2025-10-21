@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "edu.bhscs.App",
+      "projectName": "ap-java-starter"
+    },
+    {
+      "type": "java",
       "name": "Pain",
       "request": "launch",
       "mainClass": "edu.bhscs.Pain",
