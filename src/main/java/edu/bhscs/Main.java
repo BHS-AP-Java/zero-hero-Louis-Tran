@@ -17,7 +17,7 @@ public class Main {
     Baker bob = new Baker(p, "Bob");
     bob.takeJob(bakery);
     Customer alice = new Customer("Alice", 50);
-    bob.takeOrder(20, alice);
+    bob.takeOrder(alice);
     alice.cake.draw();
     alice.eatCake();
   }

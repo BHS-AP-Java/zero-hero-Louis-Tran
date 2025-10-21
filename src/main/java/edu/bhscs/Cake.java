@@ -6,12 +6,14 @@ public class Cake {
   Flour flour;
   int layers;
   int slices = 8;
+  int price;
 
   // CONSTRUCTOR
   public Cake(String flavor, int layers, Flour f) {
     this.flavor = flavor;
     this.layers = layers;
     this.flour = f;
+    this.price = layers * 10;
   }
 
   // METHODS
@@ -34,21 +36,21 @@ public class Cake {
     System.out.println("         _-'''                                         ```-_");
     System.out.println("       .'                                                   `.");
     for (int i = 0; i < this.layers; i++) {
-      System.out.println("       |`-_"+colorCake()+"_-'|");
+      System.out.println("       |`-_" + colorCake() + "_-'|");
       System.out.println("       |   ```--....____                     ____....--'''   |");
       System.out.println("       |                `````-----------'''''                |");
       if (i == this.layers - 1) {
-        System.out.println("        `-_"+colorCake()+"_-'");
+        System.out.println("        `-_" + colorCake() + "_-'");
         System.out.println("           ```--....____                     ____....--'''");
         System.out.println("                        `````-----------'''''");
       }
     }
   }
 
-  String colorCake(){
-    int gapLength=47;
-    int filling=(gapLength- this.flavor.length())/2;
-    String gap="";
+  String colorCake() {
+    int gapLength = 47;
+    int filling = (gapLength - this.flavor.length()) / 2;
+    String gap = "";
     for (int i = 0; i < filling; i++) {
       gap += " ";
     }
@@ -56,31 +58,32 @@ public class Cake {
     for (int i = 0; i < filling; i++) {
       gap += " ";
     }
-    if(this.flavor.length()%2==0){
-      gap+=" ";
+    if (this.flavor.length() % 2 == 0) {
+      gap += " ";
     }
     return gap;
   }
 
-  String flavorSubstring(){
-    if(this.flavor.length()<11){
-      int smallGap=(11-this.flavor.length())/2;
-      String smallFlavor="";
-      for(int i=0;i<smallGap;i++){
-        smallFlavor+=" ";
+  String flavorSubstring() {
+    if (this.flavor.length() < 11) {
+      int smallGap = (11 - this.flavor.length()) / 2;
+      String smallFlavor = "";
+      for (int i = 0; i < smallGap; i++) {
+        smallFlavor += " ";
       }
-      smallFlavor+=this.flavor;
-      for(int i=0;i<smallGap;i++){
-        smallFlavor+=" ";
+      smallFlavor += this.flavor;
+      for (int i = 0; i < smallGap; i++) {
+        smallFlavor += " ";
       }
-      if(this.flavor.length()%2==0){
-        smallFlavor+=" ";
+      if (this.flavor.length() % 2 == 0) {
+        smallFlavor += " ";
       }
       return smallFlavor;
 
-    }
-    else{
+    } else {
       return this.flavor.substring(0, 11);
     }
   }
+
+  
 }

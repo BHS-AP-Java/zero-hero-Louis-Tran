@@ -16,14 +16,14 @@ public class Baker {
   }
 
   // METHODS
-  void takeOrder(int price, Customer c) {
-    cash += c.pay(price);
-    c.takeCake(bakeCake());
+  void takeOrder(Customer c) {
+    c.takeCake(bakeCake(c));
   }
 
-  Cake bakeCake() {
+  Cake bakeCake(Customer c) {
     String answer = this.p.giveAnswer("what cake do you you want?");
     int layers = this.p.giveInt("How many layers do you want?");
+    c.pay(layers*10);
     int timeToBake = (10 - this.skills) * 1000;
     try {
       Thread.sleep(timeToBake);
