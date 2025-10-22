@@ -9,7 +9,7 @@ public class App {
     int age = user.giveInt("How old are you?");
 
     Flour f = new Flour(5, "all-purpose");
-    new Cake("chocolate", 3, f).draw();
+    new Cake(name, age, f).draw();
   }
 
   public static void date_10_21() {
