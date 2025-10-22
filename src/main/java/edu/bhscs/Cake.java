@@ -84,6 +84,4 @@ public class Cake {
       return this.flavor.substring(0, 11);
     }
   }
-
-  
 }
