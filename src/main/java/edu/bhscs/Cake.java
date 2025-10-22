@@ -34,31 +34,30 @@ public class Cake {
     System.out.println("                              ________");
     System.out.println("              __....----''''''        ```````----....__");
     System.out.println("         _-'''                                         ```-_");
-    System.out.println("       .'                                                   `.");
+    System.out.println("       .'"+colorCake("frosting", 51)+"`.");
     for (int i = 0; i < this.layers; i++) {
-      System.out.println("       |`-_" + colorCake() + "_-'|");
+      System.out.println("       |`-_" + colorCake(this.flavor,47) + "_-'|");
       System.out.println("       |   ```--....____                     ____....--'''   |");
       System.out.println("       |                `````-----------'''''                |");
       if (i == this.layers - 1) {
-        System.out.println("        `-_" + colorCake() + "_-'");
+        System.out.println("        `-_" + colorCake(this.flavor, 47) + "_-'");
         System.out.println("           ```--....____                     ____....--'''");
         System.out.println("                        `````-----------'''''");
       }
     }
   }
 
-  String colorCake() {
-    int gapLength = 47;
-    int filling = (gapLength - this.flavor.length()) / 2;
+  String colorCake(String middle, int gapLength) {
+    int filling = (gapLength - middle.length()) / 2;
     String gap = "";
     for (int i = 0; i < filling; i++) {
       gap += " ";
     }
-    gap += this.flavor;
+    gap += middle;
     for (int i = 0; i < filling; i++) {
       gap += " ";
     }
-    if (this.flavor.length() % 2 == 0) {
+    if (middle.length() % 2 == 0) {
       gap += " ";
     }
     return gap;
