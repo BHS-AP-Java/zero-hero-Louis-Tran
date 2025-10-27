@@ -34,9 +34,9 @@ public class Cake {
     System.out.println("                              ________");
     System.out.println("              __....----''''''        ```````----....__");
     System.out.println("         _-'''                                         ```-_");
-    System.out.println("       .'"+colorCake("frosting", 51)+"`.");
+    System.out.println("       .'" + colorCake("frosting", 51) + "`.");
     for (int i = 0; i < this.layers; i++) {
-      System.out.println("       |`-_" + colorCake(this.flavor,47) + "_-'|");
+      System.out.println("       |`-_" + colorCake(this.flavor, 47) + "_-'|");
       System.out.println("       |   ```--....____                     ____....--'''   |");
       System.out.println("       |                `````-----------'''''                |");
       if (i == this.layers - 1) {
@@ -45,6 +45,11 @@ public class Cake {
         System.out.println("                        `````-----------'''''");
       }
     }
+  }
+
+  void draw(Table t){
+    this.draw();
+    t.draw();
   }
 
   String colorCake(String middle, int gapLength) {
