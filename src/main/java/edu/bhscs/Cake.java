@@ -47,7 +47,7 @@ public class Cake {
     }
   }
 
-  void draw(Table t){
+  void draw(Table t) {
     this.draw();
     t.draw();
   }
