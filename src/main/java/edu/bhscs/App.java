@@ -9,11 +9,11 @@ public class App {
     System.out.println("Today's work");
   }
 
-  // appsc
+
   public static void date10_27() {
     Player user = new Player("Usario P. Player");
     Baker bob = new Baker(user, "Bob");
-    Table t = new Table(3, 15,3);
+    Table t = new Table(4, 55,3);
     Customer suzzie = new Customer("Suzzie", 100);
     Cake bDay = bob.bakeCake(suzzie);
     bDay.draw(t);
