@@ -21,7 +21,7 @@ public class Table {
 
     String widthGap = "";
     // Draw top of table
-    for (int i = 0; i < widthFiller+8; i++) {
+    for (int i = 0; i < widthFiller + 8; i++) {
       widthGap += " ";
     }
 
@@ -37,7 +37,7 @@ public class Table {
     // Draw legs of table
     int legsFiller = (this.width / this.legs);
     String legsGap = "";
-    for (int i = 0; i < widthFiller+8; i++) {
+    for (int i = 0; i < widthFiller + 8; i++) {
       legsGap += " ";
     }
     for (int i = 0; i < this.legs; i++) {
