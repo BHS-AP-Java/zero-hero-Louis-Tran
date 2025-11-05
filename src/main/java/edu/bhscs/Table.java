@@ -4,16 +4,23 @@ package edu.bhscs;
 public class Table {
   int legs;
   int width;
+  int height;
 
   // Constructor
-  public Table(int legs, int width) {
+  public Table(int legs, int width, int height) {
     this.legs = legs;
     this.width = width;
-    System.out.println(
-        "A table with " + legs + " legs and " + width + " inches wide has been created.");
-  }
+    this.height = height;
+    }
 
   // Methods
+
+  void setLegs(int legs) {
+    this.legs = legs;
+  }
+  void setWidth(int width) {
+    this.width = width;
+  }
   void draw() {
     // There are 8 spaces at the start of the cake, with 55 characters
     int cakeWidth = 55;
@@ -30,21 +37,26 @@ public class Table {
     }
     System.out.println(widthGap);
     // Draw legs of table
-    int legsFiller = (this.width / this.legs);
-    String legsGap = "";
-    for (int i = 0; i < widthFiller ; i++) {
-      legsGap += " ";
-    }
-    for (int i = 0; i < this.legs; i++) {
-      for (int j = 0; j < legsFiller; j++) {
-        if (j == 0) {
-          legsGap += " |";
-        } else {
-          legsGap += " ";
+    int legGaps = (this.width /this.legs);
+
+    String tableLegs = "";
+
+    for(int i=0; i<this.legs;i++){
+      if(i==0){
+        //first leg
+        for(int j=0; j<((legGaps/2)-1);j++){
+          tableLegs+=" ";
+        }
+      } else {
+        for(int j=0; j<legGaps;j++){
+          tableLegs+=" ";
         }
       }
+      tableLegs+="|";
     }
-    System.out.println(legsGap);
-    System.out.println(legsGap);
-  }
+
+    for(int i=0; i<(this.height-1);i++){
+      System.out.println(tableLegs);
+    }
+   }
 }

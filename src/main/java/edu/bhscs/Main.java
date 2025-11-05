@@ -18,7 +18,7 @@ public class Main {
     bob.takeJob(bakery);
     Customer alice = new Customer("Alice", 50);
     bob.takeOrder(alice);
-    alice.cake.draw();
+    alice.cake.draw(2);
     alice.eatCake();
   }
 }

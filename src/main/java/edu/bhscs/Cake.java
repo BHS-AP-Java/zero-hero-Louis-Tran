@@ -30,25 +30,46 @@ public class Cake {
   }
 
   // Draws a 3D ASCII art of a cake based on the number of layers
-  void draw() {
-    System.out.println("                       _______");
+  void draw(int offset) {
+    String gap="";
+    for(int i=0; i<offset; i++) {
+      gap+=" ";
+    }
+
+    System.out.print(gap);
+    System.out.println("                       ________");
+    System.out.print(gap);
     System.out.println("       __....----''''''        ```````----....__");
+    System.out.print(gap);
     System.out.println("  _-'''                                         ```-_");
+    System.out.print(gap);
     System.out.println(".'" + colorCake("frosting", 51) + "`.");
     for (int i = 0; i < this.layers; i++) {
+      System.out.print(gap);
       System.out.println("|`-_" + colorCake(this.flavor, 47) + "_-'|");
+      System.out.print(gap);
       System.out.println("|   ```--....____                     ____....--'''   |");
+      System.out.print(gap);
       System.out.println("|                `````-----------'''''                |");
       if (i == this.layers - 1) {
+        System.out.print(gap);
         System.out.println(" `-_" + colorCake(this.flavor, 47) + "_-'");
+        System.out.print(gap);
         System.out.println("    ```--....____                     ____....--'''");
+        System.out.print(gap);
         System.out.println("                 `````-----------'''''");
       }
     }
   }
 
   void draw(Table t) {
-    this.draw();
+    //checking table width compared to cake width:
+    int offset = 0;
+    if( 55-t.width <0 ) {
+      //table is bigger than cake
+      offset = Math.abs(55 - t.width)/2;
+    }
+    this.draw(offset);
     t.draw();
   }
 
