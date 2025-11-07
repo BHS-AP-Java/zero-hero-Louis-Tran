@@ -1,0 +1,53 @@
+package edu.bhscs;
+
+public class Baker {
+  // PROPERTIES AND FIELDS
+  String name;
+  Player p;
+  Flour f;
+  Store placeOfWork;
+  int cash;
+  int skills = 0;
+
+  // CONSTRUCTOR
+  Baker(Player p, String name) {
+    this.p = p;
+    this.name = name;
+  }
+
+  // METHODS
+  void takeOrder(Customer c) {
+    c.takeCake(bakeCake(c));
+  }
+
+  Cake bakeCake(Customer c) {
+    String answer = this.p.giveAnswer("what cake do you you want?");
+    int layers = this.p.giveInt("How many layers do you want?");
+    c.pay(layers * 10);
+    int timeToBake = (10 - this.skills) * 1000;
+    try {
+      Thread.sleep(timeToBake);
+      System.out.println("Baked a " + answer + " cake.");
+      learn(1);
+      return new Cake(answer, layers, this.f);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+      System.out.println("Something went wrong while baking the cake.");
+      return null;
+    }
+  }
+
+  void takeJob(Store bakery) {
+    String doYouWantToWorkHere = this.p.giveAnswer("Do you want to work at " + bakery.getName());
+    if (doYouWantToWorkHere.equals("y")) {
+      this.placeOfWork = bakery;
+      System.out.println(this.name + " now works at " + bakery.getName());
+    }
+  }
+
+  public void learn(int amount) {
+    if (this.skills + amount < 11) {
+      this.skills += amount;
+    }
+  }
+}
