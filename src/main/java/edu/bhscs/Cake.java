@@ -32,8 +32,6 @@ public class Cake {
   // Draws a 3D ASCII art of a cake based on the number of layers
   void draw() {
 
-
-
     System.out.println("                       ________");
     System.out.println("       __....----''''''        ```````----....__");
     System.out.println("  _-'''                                         ```-_");
@@ -83,20 +81,18 @@ public class Cake {
   }
 
   void draw(Table t) {
-    //checking table width compared to cake width:
+    // checking table width compared to cake width:
     int offset = 0;
-    if( 55-t.width <0 ) {
-      //table is bigger than cake
-      offset = Math.abs(55 - t.width)/2;
+    if (55 - t.width < 0) {
+      // table is bigger than cake
+      offset = Math.abs(55 - t.width) / 2;
       this.draw(offset);
       t.draw();
-    }
-    else {
-      //cake is bigger than table
+    } else {
+      // cake is bigger than table
       this.draw();
       t.draw(offset);
     }
-
   }
 
   String colorCake(String middle, int gapLength) {
